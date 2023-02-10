@@ -165,7 +165,5 @@ func TestLabels(t *testing.T) {
 	assert.Equal(t, maps, gotMaps)
 
 	gotLabels := MapsToLabels(maps)
-	if !assert.ElementsMatch(t, Labels(labels), gotLabels) {
-		t.Errorf("MapsToLabels() = %v, want %v", gotLabels, Labels(labels))
-	}
+	assert.ElementsMatch(t, Labels(labels), gotLabels)
 }
